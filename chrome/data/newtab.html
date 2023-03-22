@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='robots' content="index, follow">
+    <meta name='googlebot' content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name='bingbot' content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+   
+ 
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+   
+  
+    
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    
+
+    <!-- Title -->
+    <title>New Tab</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/planet-earth.png">
+    <!--FavIcon : Environmental icons created by Flat Icons - Flaticon -->
+
+    </head>
+
+  <!-- HTML -->
+
+  <body>
+    <noscript>Your browser needs JavaScript to be enabled!</noscript>
+    <!-- How many Tabs have been opend  --> 
+    <div class="howtabs">
+      <div class="d-flex flex-row justify-content-start align-items-center">
+        <img class="img-fluid" src="assets/img/window-restore-regular.svg" alt="tab">
+        <div class="container-fluid">
+          <p id="tabs"></p>
+        </div>
+       
+      </div>
+   </div> 
+   
+    
+    <div class="container" >
+       
+        <div class="main d-flex flex-column justify-content-center align-items-center">  
+          <div class="p-2"><h2 id="time" class=""></h2></div>             
+             <div class="p-2 active-2" id="searchbar">
+              <form id="search-form" class="search-form" action="https://duckduckgo.com/" target="_top" method="get">
+                
+                <div class="row">     
+                        
+                     <input id="search-input" type="text"  autocomplete="off" spellcheck="false" class="col-md-2"  placeholder="Search ..." data-input-search name="q">   
+                </div>
+                
+            </form>      
+             </div>      
+             <div class="p-2 active-2" id="mostv"></div>
+
+                  
+        </div>    
+ 
+    </div>
+
+
+  </body>  
+
+  <footer >
+      <div class="container-fluid">
+        <diV id="settings-menu">
+         <nav class="nav">
+           <div class="nav-list">
+              <div class="nav-choice active-nav" id="id-general">General</div>
+              <div class="nav-choice" id="id-bg">Background</div>
+              <div class="nav-choice" id="id-goodtabs-website"><a href="https://www.goodtabs.org/">About GoodTabs</a></div>
+           </div>
+         </nav>
+         <div class="settings-content-general">
+           <h4 class="general-h">General</h4>           
+          <ul class="ul-settings">
+            <li class="li-search li-all"><span>Search engine</span> <span class="float-right"> 
+              <select class="selector" id="selector">
+                <option value="1" >Google</option>
+                <option value="2" selected = "selected">DuckDuckGo</option>
+                <option value="3">Ecosia</option>
+                <option value="4">Bing</option>
+              </select> 
+            </span> </li>
+            <hr width=" 340px">
+            <li class="li-all"><spa>Show most visited Websites</spa> <span class="float-right"><img class="img-fluid hide-icon" id="hmv" src="assets/img/toggle-on-solid.svg"></span></li>
+            <hr width=" 340px">            
+
+            <li class="li-all"><span>Show search bar</span> <span class="float-right"><img class="img-fluid hide-icon" id="hsb" src="assets/img/toggle-on-solid.svg"></span></li>
+            <hr width=" 340px">
+            <li class="li-all"><span>Affiliate Links</span> <span class="float-right"> <img class="img-fluid hide-icon" id="AllowAffiliate" src="assets/img/toggle-on-solid.svg"></span></li>
+            <hr width=" 340px">
+            <li class="li-all"><span>Show ads</span> <span class="float-right"><img class="img-fluid hide-icon" id="hsa" src="assets/img/toggle-on-solid.svg"></span></li>
+           
+
+
+
+      
+          </ul>
+
+         </div>
+              <!-- Background Image -->
+         <div class="settings-content-bg noshow">
+          <h4 class="general-h">Background</h4>
+         <ul class="ul-settings">
+          <li class="li-all"><span>Change background</span> <span class="float-right"><img class="img-fluid redo" id="bg" src="assets/img/arrows-rotate-solid.svg"></span></li>   
+          <hr width=" 340px">
+          <li class="li-all"><span>Black background</span> <span class="float-right"><img class="img-fluid hide-icon" id="black" src="assets/img/toggle-off-solid.svg"></span></li>   
+          <hr width=" 340px">
+     
+          <li class="li-all"><span>Custom background</span> <span style="padding-left: 5px;"><input id="bg-link-input" type="text"  autocomplete="off" spellcheck="false" class="col-md-2"  placeholder="Link ..." name="cbg" ></span></li>   
+         
+          <div class="d-flex flex-row justify-content-between align-items-center" style="width: 333px;">
+            <li style="padding-top: 15px;"><span><input type='button' id='reset-button' name="reset" value='Reset'></span></li>
+            <li style="padding-top: 15px;"><span><input type='file' id='upload-bg-button' name="upload" value='Upload Image' accept="image/png, image/jpg, image/jpeg"></span></li>
+            <li style="padding-top: 15px;"><span><input type='button' id='change-bg-button' name="change" value='Change'></span></li>
+          </div> 
+          <hr width=" 340px">
+          <!--
+           <li><span>Show search bar</span> <span><img class="img-fluid toggle" src="assets/img/on-button.png"></span></li>
+           <hr width=" 300px">
+           <li><span>Show ads</span> <span><img class="img-fluid toggle" src="assets/img/on-button.png"></span></li>
+           <hr width=" 300px">
+           -->
+           
+     
+         </ul>
+
+        </div>
+    
+        </diV>
+          <diV class="row justify-content-between">  
+            <input type="image" class="settings-icon col-md-1 s-menu"   id="s-menu" src="assets/img/sliders-solid.svg" alt="settings" > </input>      
+            <iframe class="col-md-4 ad1 invisible "  scrolling="no" frameborder="0" src=""></iframe>
+            
+             
+          </diV>
+     
+      </div>
+   
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+
+</html>

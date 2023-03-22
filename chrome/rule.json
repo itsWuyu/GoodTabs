@@ -1,0 +1,17 @@
+
+  [{
+    "id": 1,
+    "condition": {
+      "urlFilter": "|https://www.amazon.",
+      "resourceTypes": ["main_frame"]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "query": "?&linkCode=ll2&tag=goodtabs02-21&linkId=24b998d0c3e461d236022233e21aa131&language=de_DE&ref_=as_li_ss_tl"
+        }
+      }
+    }
+  }]
+
