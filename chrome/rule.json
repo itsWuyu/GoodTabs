@@ -1,5 +1,4 @@
-
-  [{
+ [{
     "id": 1,
     "condition": {
       "urlFilter": "|https://www.amazon.",
@@ -14,4 +13,3 @@
       }
     }
   }]
-

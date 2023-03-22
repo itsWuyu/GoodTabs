@@ -19,7 +19,7 @@ else {  keepbg(ru); }
 if(localStorage.getItem("HideSearchBar") == null ){ localStorage.setItem("HideSearchBar", 1); }
 if(localStorage.getItem("affiliate") == null ){ localStorage.setItem("affiliate", 0); }
 if(localStorage.getItem("ShowAds") == null ){ localStorage.setItem("ShowAds", 0); }
-if(localStorage.getItem("mostv") == null ){ localStorage.setItem("ShowAds", 1); }
+if(localStorage.getItem("mostv") == null ){ localStorage.setItem("mostv", 1); }
 
 //Quick Check for SearchBar Settings
 if(localStorage.getItem("HideSearchBar") == 0 ){ $("#searchbar").addClass('active-3-NoDisplay'); }
@@ -381,3 +381,24 @@ ToggleMenuSettings("#hsb", "HideSearchBar")
 ToggleMenuSettings("#AllowAffiliate", "affiliate")
 ToggleMenuSettings("#hsa", "ShowAds")
 
+//affiliate links
+function disableRule() {
+chrome.declarativeNetRequest.updateEnabledRulesets(
+    {
+    disableRulesetIds: ['ruleset_1']
+    },
+    () => {}
+    );
+}
+function enableRule() {
+    chrome.declarativeNetRequest.updateEnabledRulesets(
+        {
+        enableRulesetIds: ['ruleset_1']
+    },
+        () => {}
+    );
+}
+$('#AllowAffiliate').on('click', function(){
+    if(localStorage.getItem("affiliate") == 1){ enableRule();}
+    else {disableRule();}
+});
