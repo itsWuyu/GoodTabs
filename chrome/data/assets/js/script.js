@@ -9,6 +9,7 @@ let ru = localStorage.getItem("bg")
 let day = localStorage.getItem("day")
 
 if(CDay != day && localStorage.getItem('darkbg') != 1 &&  localStorage.getItem('darkbg') != 1){
+    
 //localStorage.setItem("time", CTime);
 localStorage.setItem("day", CDay);
 renderItem(); 
@@ -20,6 +21,31 @@ if(localStorage.getItem("HideSearchBar") == null ){ localStorage.setItem("HideSe
 if(localStorage.getItem("affiliate") == null ){ localStorage.setItem("affiliate", 0); }
 if(localStorage.getItem("ShowAds") == null ){ localStorage.setItem("ShowAds", 0); }
 if(localStorage.getItem("mostv") == null ){ localStorage.setItem("mostv", 1); }
+if(localStorage.getItem("whats-new") == null ){ localStorage.setItem("whats-new", 1); } //something new = 1 else 0 
+
+
+//Whats New
+if(localStorage.getItem("whats-new") == 1){
+    $('#whats-new').attr('style', 'display : block');
+    $('#s-menu').attr('style', 'z-index : 101');
+    $('#settings-menu').attr('style', 'z-index : 101');
+    $(document).ready(function () {
+        $('.s-menu').on('click', function(){
+            $('#whats-new > img').attr('style', 'display : none');
+            $('#whats-new > h3').attr('style', 'display : none');
+            $('.li-all > span:contains(Affiliate Links)').css('font-weight', 'bold');
+            $('.li-all > span:contains(Affiliate Links)').css('text-decoration', 'underline');
+            $('.li-all > span:contains(Affiliate Links)').css('text-style', 'italic');
+            $('.li-all > span:contains(Affiliate Links)').css('color', '#ff574d');
+            $('#whats-new').attr('style', 'display: none');
+            localStorage.setItem("whats-new", 0);
+            $('#s-menu').attr('style', 'z-index : 1');
+        })
+    })
+
+}
+
+
 
 //Quick Check for SearchBar Settings
 if(localStorage.getItem("HideSearchBar") == 0 ){ $("#searchbar").addClass('active-3-NoDisplay'); }
