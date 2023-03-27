@@ -9,6 +9,7 @@ let ru = localStorage.getItem("bg")
 let day = localStorage.getItem("day")
 
 if(CDay != day && localStorage.getItem('darkbg') != 1 &&  localStorage.getItem('darkbg') != 1){
+    
 //localStorage.setItem("time", CTime);
 localStorage.setItem("day", CDay);
 renderItem(); 
