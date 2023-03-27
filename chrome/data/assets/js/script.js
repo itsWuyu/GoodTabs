@@ -25,6 +25,7 @@ if(localStorage.getItem("whats-new") == null ){ localStorage.setItem("whats-new"
 
 //Whats New
 if(localStorage.getItem("whats-new") == 1){
+    $('#whats-new').attr('style', 'display : block');
     $('#s-menu').attr('style', 'z-index : 101');
     $('#settings-menu').attr('style', 'z-index : 101');
     $(document).ready(function () {
@@ -42,9 +43,7 @@ if(localStorage.getItem("whats-new") == 1){
     })
 
 }
-else{
-    $('#whats-new').attr('style', 'display: none');
-}
+
 
 
 //Quick Check for SearchBar Settings

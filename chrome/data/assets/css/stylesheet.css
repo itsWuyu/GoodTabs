@@ -510,6 +510,7 @@ a:visited {
 }
 #whats-new h3 {
     position: absolute;
+    opacity: 1;
     z-index: 101;
     height: 80px;
     width: 100%;
